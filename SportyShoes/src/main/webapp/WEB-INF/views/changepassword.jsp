@@ -11,7 +11,7 @@
 <body>
 	<div align="center">
 		<h1>Change Password</h1>
-		<form action="/changepassword">
+		<form action="/changepassword" method="post">
 			<table>
 				<tr>
 					<td>Enter UserName</td>
@@ -28,6 +28,8 @@
 
 
 		</form>
+		<p>${message}</p>
 	</div>
+	
 </body>
 </html>

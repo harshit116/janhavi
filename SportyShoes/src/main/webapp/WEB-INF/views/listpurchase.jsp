@@ -8,26 +8,28 @@
 <title>User Login</title>
 </head>
 <body>
-	<h1>Buy Shoes From Here</h1>
+	<h1>List Product</h1>
 	<table border="2">
 		<tr>
-			<th>ShoeId</th>
+			<th>PurchaseId</th>
 			<th>Brand</th>
 			<th>Size</th>
 			<th>Category</th>
 			<th>Price</th>
+			<th>Date</th>
 			
 			
 		</tr>
 		
-		<c:forEach var="shoe" items="${shoes}">
+		<c:forEach var="purchases" items="${purchase}">
 		
 			<tr>
-				<td>${shoe.id}</td>
-				<td>${shoe.brand}</td>
-				<td>${shoe.size}</td>
-				<td>${shoe.category}</td>
-				<td>${shoe.price}</td>
+				<td>${purchases.id}</td>
+				<td>${purchases.brand}</td>
+				<td>${purchases.size}</td>
+				<td>${purchases.category}</td>
+				<td>${purchases.price}</td>
+				<td>${purchases.date}</td>
 				
 			
 			</tr>
@@ -35,14 +37,5 @@
 		</c:forEach>
 		
 	</table>
-	<form action="buyshoe" >
-			<table>
-				</tr>
-				<td>Enter ShoeId To Purchase: <input type="text" name="id" /></td>
-				<td><input type="submit" value="Buy" /></td>
-				</tr>
-				
-			</table>
-		</form>
 </body>
 </html>

@@ -31,6 +31,11 @@
 		<form action="/listuser">
 			<input type="submit" value="list of User" />
 		</form>
+		<h2>Click Below Button to Find List of Purchase Item</h2>
+		<form action="/listpurchase">
+			<input type="submit" value="list of Purchase" />
+		</form>
+		
 		
 	</div>
 </body>

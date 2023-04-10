@@ -24,10 +24,11 @@ public class ChangePassword {
 	{
 		return "changepassword";
 	}
-//	@PutMapping
-//	public Admin update(@RequestBody Admin admin) {
-//		
-//		
-//		return repo.save(admin);
-//	}
+	@PostMapping
+	public Admin update(@ModelAttribute("admin") Admin admin, ModelMap model) {
+		Admin oldAdmin = repo.findByUsername(admin.getUsername());
+		oldAdmin.setPassword(admin.getPassword());
+		model.addAttribute("message","Password updated Successfully");
+		return repo.save(oldAdmin);
+	}
 }

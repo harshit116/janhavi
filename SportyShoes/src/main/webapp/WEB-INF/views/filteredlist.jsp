@@ -8,27 +8,20 @@
 <title>User Display</title>
 </head>
 <body>
-	<h1>List of User</h1>
+<h2>The user you want to find</h2>
 	<table border="2">
 		<tr>
 			<th>UserId</th>
 			<th>UserName</th>
 		</tr>
 
-		<c:forEach var="users" items="${user}">
+		
 
 			<tr>
-				<td>${users.id}</td>
-				<td>${users.username}</td>
+				<td>${user.id}</td>
+				<td>${user.username}</td>
 			</tr>
-		</c:forEach>
+		
 	</table>
-	<form action="/listuser" method="post">
-
-		User Name:<input name="username" type="text"> Click to Search
-		the User :<input type="submit" value="Search" />
-
-	</form>
-
 </body>
 </html>
